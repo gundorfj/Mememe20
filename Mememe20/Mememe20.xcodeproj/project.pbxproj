@@ -21,6 +21,7 @@
 		FA8425E322479058004C5C9D /* MemeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8425E222479058004C5C9D /* MemeTabBarViewController.swift */; };
 		FA8425E5224790CF004C5C9D /* MemeTableViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8425E4224790CF004C5C9D /* MemeTableViewcontroller.swift */; };
 		FA8425E7224791A5004C5C9D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8425E6224791A5004C5C9D /* TableViewCell.swift */; };
+		FAE414BC225E94770099B277 /* MemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE414BB225E94770099B277 /* MemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FA8425E222479058004C5C9D /* MemeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTabBarViewController.swift; sourceTree = "<group>"; };
 		FA8425E4224790CF004C5C9D /* MemeTableViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewcontroller.swift; sourceTree = "<group>"; };
 		FA8425E6224791A5004C5C9D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FAE414BB225E94770099B277 /* MemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				FA8425E4224790CF004C5C9D /* MemeTableViewcontroller.swift */,
 				FA8425E6224791A5004C5C9D /* TableViewCell.swift */,
 				FA208222224FAC770075B470 /* MemeDetailViewController.swift */,
+				FAE414BB225E94770099B277 /* MemeManager.swift */,
 			);
 			path = Mememe20;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				FA8425DB22478740004C5C9D /* TextFieldDelegate.swift in Sources */,
 				FA8425E7224791A5004C5C9D /* TableViewCell.swift in Sources */,
 				FA8425E122478DD2004C5C9D /* CollectionViewCell.swift in Sources */,
+				FAE414BC225E94770099B277 /* MemeManager.swift in Sources */,
 				FA8425D922478740004C5C9D /* MemeEditor.swift in Sources */,
 				FA8425DA22478740004C5C9D /* MemeStruct.swift in Sources */,
 				FA8425C322465719004C5C9D /* AppDelegate.swift in Sources */,

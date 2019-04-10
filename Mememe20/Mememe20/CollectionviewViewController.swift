@@ -18,8 +18,8 @@ class CollectionviewViewController: UICollectionViewController, UICollectionView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memesLib
+        memes = MemeManager.shared.LoadMemeLib()
+
         collectionView?.reloadData()
     }
     
@@ -33,10 +33,7 @@ class CollectionviewViewController: UICollectionViewController, UICollectionView
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: dimension, height: dimension)
         
-        //grab the array of memes from app delegate and set to memes
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memesLib
-        
+        memes = MemeManager.shared.LoadMemeLib()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
