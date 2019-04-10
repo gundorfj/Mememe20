@@ -26,19 +26,21 @@ class CollectionviewViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memesLib
-        
+        //Set space to 3.0
         let space:CGFloat = 3.0
         let dimension = (view.frame.size.width - (2 * space)) / 3.0
-        
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        
+        //grab the array of memes from app delegate and set to memes
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memesLib
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        //return the number of Memes items
         return memes.count
     }
     
@@ -50,8 +52,8 @@ class CollectionviewViewController: UICollectionViewController, UICollectionView
         return cell
     }
     
+    // If item is selected, push MemeDetailViewController
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let controller = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.meme = self.memes[indexPath.item]
         self.navigationController!.pushViewController(controller, animated: true)

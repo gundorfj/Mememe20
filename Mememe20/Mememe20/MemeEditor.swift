@@ -48,7 +48,8 @@ UINavigationControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
+        self.tabBarController?.tabBar.isHidden = true
+
         if let memeFromDetail = memeSentFromDetail as MemeStruct! {
             imageView.image = memeFromDetail.memedImage
         }
@@ -57,6 +58,8 @@ UINavigationControllerDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         unSubscribeTokeyboardNotifications()
+        self.tabBarController?.tabBar.isHidden = false
+
     }
     
     //set textfield helper function
@@ -80,8 +83,9 @@ UINavigationControllerDelegate {
     //Cancel button action
     @IBAction func cancel(_ sender: Any)
     {
+        // NOw, according to the Project Specification, the cancel button should take you straight back to the Send Memes
         imageView.image = nil
-        setStatus(status: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -116,7 +120,7 @@ UINavigationControllerDelegate {
         bottomToolbar.isHidden = hide
     }
     
-    //Move vierw upwards on Keyboard show
+    //Move view upwards on Keyboard show
     @objc func keyboardWillShow(_ notification: Notification)
     {
         if (bottomTextField.isFirstResponder)
@@ -189,7 +193,7 @@ UINavigationControllerDelegate {
         topTextField.isHidden = status
         bottomTextField.isHidden = status
         shareOutlet.isEnabled = !status
-        cancelOutlet.isEnabled = !status
+        cancelOutlet.isEnabled = true
     }
 
     // Save the memed image

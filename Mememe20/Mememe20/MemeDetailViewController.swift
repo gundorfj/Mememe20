@@ -21,10 +21,15 @@ class MemeDetailViewController: UIViewController {
         imageView.image = meme.memedImage
     }
     
-    @IBAction func editAction(_ sender: Any) {
-        let memeEditorVC = storyboard!.instantiateViewController(withIdentifier: "MemeEditor") as! MemeEditor
-        memeEditorVC.memeSentFromDetail = self.meme
-        self.navigationController?.pushViewController(memeEditorVC, animated: true)
+    //Hide toolbar before appearing
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
+    //Unhide toolbar when leaving
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 }

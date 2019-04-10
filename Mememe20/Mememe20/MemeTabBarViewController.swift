@@ -13,8 +13,6 @@ class MemeTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tabBar.unselectedItemTintColor = UIColor.black
     }
-    
 }
