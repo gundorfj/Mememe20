@@ -12,7 +12,7 @@ import UIKit
 class MemeTableViewcontroller: UITableViewController {
     
     var memes: [MemeStruct] {
-        return MemeManager.shared.LoadMemeLib()
+        return MemeManager.shared.loadMemeLib()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +36,7 @@ class MemeTableViewcontroller: UITableViewController {
         
         let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, IndexPath) in
             // Remove item directly from the memelib array
-            MemeManager.shared.DeleteFromMemeLib(place:indexPath.row)
+            MemeManager.shared.deleteFromMemeLib(place:indexPath.row)
 
             // And remembe to delete the row from the table view
             tableView.deleteRows(at: [IndexPath as IndexPath], with: .fade)

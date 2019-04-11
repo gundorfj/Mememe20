@@ -18,7 +18,7 @@ class CollectionviewViewController: UICollectionViewController, UICollectionView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        memes = MemeManager.shared.LoadMemeLib()
+        memes = MemeManager.shared.loadMemeLib()
 
         collectionView?.reloadData()
     }
@@ -33,7 +33,7 @@ class CollectionviewViewController: UICollectionViewController, UICollectionView
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: dimension, height: dimension)
         
-        memes = MemeManager.shared.LoadMemeLib()
+        memes = MemeManager.shared.loadMemeLib()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

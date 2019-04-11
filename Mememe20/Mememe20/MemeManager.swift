@@ -17,17 +17,17 @@ class MemeManager
     
     init(){}
     
-    func LoadMemeLib() -> [MemeStruct]
+    func loadMemeLib() -> [MemeStruct]
     {
         return memesLib
     }
     
-    func AddToMemeLib(item: MemeStruct)
+    func addToMemeLib(item: MemeStruct)
     {
         memesLib.append(item)
     }
 
-    func DeleteFromMemeLib(place: Int)
+    func deleteFromMemeLib(place: Int)
     {
         memesLib.remove(at: place)
     }

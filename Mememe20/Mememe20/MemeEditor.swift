@@ -201,7 +201,7 @@ UINavigationControllerDelegate {
         
         // Create the memed image with all needed parts included
         let meme = MemeStruct(topText: topTextField.text!, buttomText: bottomTextField.text!, imageOriginal: imageView.image!, memedImage: memeImage)
-        MemeManager.shared.AddToMemeLib(item: meme)
+        MemeManager.shared.addToMemeLib(item: meme)
         self.dismiss(animated: true, completion: nil)
     }
 }
